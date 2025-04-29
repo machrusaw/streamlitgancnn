@@ -145,11 +145,11 @@ if uploaded_files:
 
         col1, col2, col3 = st.columns(3)
         with col1:
-            st.image(input_image, caption="Gambar Asli (Ground Truth))", use_column_width=True)
+            st.image(input_image, caption="Gambar Asli (Ground Truth))", use_container_width=True)
         with col2:
-            st.image(grayscale_image.resize((256, 256)), caption="Gambar Grayscale (Input)", use_column_width=True)
+            st.image(grayscale_image.resize((256, 256)), caption="Gambar Grayscale (Input)", use_container_width=True)
         with col3:
-            st.image(prediction_image, caption="Gambar Hasil Generate", use_column_width=True)
+            st.image(prediction_image, caption="Gambar Hasil Generate", use_container_width=True)
 
         img_bytes = io.BytesIO()
         prediction_image.save(img_bytes, format='PNG')
